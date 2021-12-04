@@ -1,24 +1,30 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import Proptypes from "prop-types";
-import { Button, } from "react-bootstrap"; 
-import { TextGroupField } from "../common";
+import { Button } from "react-bootstrap";
+import { TextGroupField, CheckBox } from "../common";
 import { Banner } from "../banner";
 import { isFormValidation } from "../../utils";
 
-const Login = (props)=> {
-    const {setIsShowLoginBlock} = props;
+const Registration = (props)=> {
 
+    const {setIsShowLoginBlock, } = props;
+    const [fullName, setFullName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [termCondition, setTermCondition] = useState(false);
+
     const [isShowErrorBanner, setIsShowErrorBanner] = useState(false);
     const [isShowSuccessBanner, setIsShowSuccessBanner] = useState(false);
     const [errorBannerMessage, setErrorBannerMessage] = useState("");
     const [successBannerMessage, setSuccessBannerMessage] = useState("");
 
-    const handleLogin = ()=> {
+
+    const handleRegistration = ()=> {
         const formObj = {
-            Email:  email,
+            Name: fullName,
+            Email: email,
             Password: password,
+            Term: termCondition
         }
 
         const validationRes = isFormValidation(formObj);
@@ -35,7 +41,7 @@ const Login = (props)=> {
             setErrorBannerMessage("");
 
             setIsShowSuccessBanner(true);
-            setSuccessBannerMessage("Logn Done");
+            setSuccessBannerMessage("Yeee! Registration Done");
 
             // TODO Call Login API
         }
@@ -51,34 +57,37 @@ const Login = (props)=> {
         setErrorBannerMessage("");
     }
 
+
     return (
         <div className="w-100">
+
             {isShowErrorBanner && <Banner type="danger" message={errorBannerMessage} handleCloseBanner={closeErrorBanner}/>}
             {isShowSuccessBanner && <Banner type="info" message={successBannerMessage} handleCloseBanner={closeSuccessBanner}/>}
 
             <div className="w-100">
-                <h4>Login to Schedule</h4>
+                <h4>Welcome to Schedule</h4>
             </div>
-
             <div id="loginFormBlock" className="mt-5">
-                <TextGroupField label="Email" id="luEmail" value={email} handleChange={setEmail} placeholder="Type your valid email"/>
-                <TextGroupField label="Password" id="luPassword" type="password" handleChange={setPassword} value={password} placeholder="Type your password"/>
-                <Button variant="info" className="w-100 mt-3 baseButton" onClick={()=>{handleLogin()}}>Login</Button>
+                <TextGroupField label="Full Name" id="rFullName" value={fullName} handleChange={setFullName} placeholder="Type your name"/>
+                <TextGroupField label="Email" id="rEmail" value={email} handleChange={setEmail} placeholder="Type your valid email"/>
+                <TextGroupField label="Password (8 digit minimum)" type="password" value={password} handleChange={setPassword} placeholder="Type your password"/>
+                <CheckBox id="termsConditions" label="Accept terms & conditions" name="termCondition" value={termCondition} handleChange={setTermCondition}/>
+                <Button variant="info" className="w-100 mt-3 baseButton" onClick={()=> {handleRegistration()}}>Click to Join</Button>
             </div>
 
             <div className="w-100 mt-4">
-                <p>Don't have any account? <span className="baseAnchor" onClick={()=> {setIsShowLoginBlock(false)}}>Create new one</span></p>
+                <p>Already have account? <span className="baseAnchor" onClick={()=> {setIsShowLoginBlock(true)}}>Login now</span></p>
             </div>
         </div>
     )
 }
 
-Login.propTypes = {
+Registration.propTypes = {
     setIsShowLoginBlock: Proptypes.func,
 }
 
-Login.defaultProps = {
+Registration.defaultProps = {
     setIsShowLoginBlock: ()=>{}
 }
 
-export default Login;
+export default Registration;

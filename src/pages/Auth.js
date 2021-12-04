@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import { Container } from "react-bootstrap";
-import Login from "../components/auth/Login";
+import { Login, Registration } from "../components/auth";
 
 const AuthPage = ()=> {
     const [isShowLoginBlock, setIsShowLoginBlock] = useState(true);
@@ -13,6 +13,7 @@ const AuthPage = ()=> {
                     <div className="col-xl-4 col-lg-5 col-md-7 col-sm-11">
                         <div className="w-75 p-5 mx-auto" id="loginBaseBlock">
                             {isShowLoginBlock && <Login setIsShowLoginBlock={setIsShowLoginBlock}/>}
+                            {!isShowLoginBlock && <Registration setIsShowLoginBlock={setIsShowLoginBlock}/>}
                         </div>
                     </div>
                 </div>

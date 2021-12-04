@@ -1,3 +1,4 @@
 import TextGroupField from "./TextGroupField";
+import CheckBox from "./CheckBox";
 
-export {TextGroupField};
+export {TextGroupField, CheckBox};
