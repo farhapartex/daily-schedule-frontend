@@ -57,7 +57,7 @@ const Login = (props)=> {
             {isShowSuccessBanner && <Banner type="info" message={successBannerMessage} handleCloseBanner={closeSuccessBanner}/>}
 
             <div className="w-100">
-                <h4>Login to Circle</h4>
+                <h4>Login to Schedule</h4>
             </div>
 
             <div id="loginFormBlock" className="mt-5">
