@@ -11,3 +11,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+#loginLeftSide{
+  background: url("./static/images/login_page_img.jpg") no-repeat center center;
+  background-size: cover;
+  background-position: left top;
+  height: 100vh;
+}
