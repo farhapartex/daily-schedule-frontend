@@ -2,3 +2,29 @@
     background: #f56a3f;
     height: 100vh;
 }
+
+#brandName{
+    color: #fff;
+}
+
+#sidebarMenu ul{
+    margin: 0px !important;
+    padding: 0px !important;
+    list-style: none;
+
+}
+
+#sidebarMenu ul li{
+    padding: 22px 20px;
+}
+
+#sidebarMenu ul li:hover{
+    background: #e7572b;
+}
+
+#sidebarMenu ul li a{
+    text-decoration: none;
+    color: #333333;
+    display: block;
+    
+}

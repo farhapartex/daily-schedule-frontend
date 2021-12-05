@@ -1,4 +1,5 @@
 import React from "react";
+import SidebarMenu from "./SidebarMenu";
 
 const LeftSidebar = ()=> {
     return (
@@ -7,14 +8,7 @@ const LeftSidebar = ()=> {
                 <h4 className="text-center">Schedule</h4>
             </div>
 
-            <div id="sidebarMenu">
-                <ul>
-                    <li><a href="/">Dashboard</a></li>
-                    <li><a href="/">Schedule</a></li>
-                    <li><a href="/">Profile</a></li>
-                    <li><a href="/">Logout</a></li>
-                </ul>
-            </div>
+            <SidebarMenu />
         </div>
     )
 }
