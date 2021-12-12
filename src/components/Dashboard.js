@@ -6,7 +6,7 @@ import "../static/css/Dashboard.css";
 const Dashboard = ()=> {
     return (
         <div className="w-100 p-3" id="dashboard">
-            <div className="pl-5 mt-3">
+            <div className="pageHeading">
                 <h4 className="mt-4">Today | 05 December 2021</h4>
             </div>
 
