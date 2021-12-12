@@ -1,11 +1,8 @@
-import React, {useState} from "react";
+import React from "react";
 import { Container, Button } from "react-bootstrap";
 import { TextGroupField, DatePicker } from "./common";
 
 const Schedule = ()=> {
-
-    const [dateValue, setDateValue] = useState(new Date());
-
 
     return (
         <div className="w-100">
@@ -21,7 +18,7 @@ const Schedule = ()=> {
                         </div>
 
                         <div className="col-3">
-                            <DatePicker label="Date & Time" id="scheduleDateTime"/>
+                            <DatePicker label="Date & Time *" id="scheduleDateTime"/>
                         </div>
 
                         <div className="col-3">
