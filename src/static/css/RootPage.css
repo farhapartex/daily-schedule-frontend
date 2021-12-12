@@ -1,5 +1,5 @@
 #leftSide{
-    background: #f56a3f;
+    background: linear-gradient(to top, #1affb2 20%,  #1affb2 80%);
     height: 100vh;
 }
 
@@ -19,7 +19,7 @@
 }
 
 #sidebarMenu ul li:hover{
-    background: #e7572b;
+    background: #00e699;
 }
 
 #sidebarMenu ul li a{
