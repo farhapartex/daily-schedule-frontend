@@ -1,6 +1,7 @@
 import React from "react";
 import { Container } from "react-bootstrap";
 import { SingleScheduleBox } from "./scheduleList";
+import { DatePicker } from "./common";
 import "../static/css/Dashboard.css";
 
 const Dashboard = ()=> {
@@ -11,7 +12,15 @@ const Dashboard = ()=> {
             </div>
 
             <Container fluid>
-                <div className="row mt-5">
+                <div className="row mt-4">
+                    <div className="col-3">
+                        <DatePicker label="Search by Date" id="scheduleDateTime" minDate={null}/>
+                    </div>
+                </div>
+            </Container>
+
+            <Container fluid>
+                <div className="row mt-3">
                     <SingleScheduleBox title="Metting with Daniel" time="10:45 am" medium="Skype"/>
                     <SingleScheduleBox title="Metting with Jhon" time="12:15 pm" medium="Google Meet"/>
                     <SingleScheduleBox title="Coffee time" time="12:35 pm" medium="No Medium"/>

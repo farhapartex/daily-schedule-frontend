@@ -4,7 +4,7 @@ import Proptypes from "prop-types";
 import { Form } from "react-bootstrap";
 
 const DatePicker = (props)=>{
-    const {label, id} = props;
+    const {label, id, minDate} = props;
 
     const [dateValue, setDateValue] = useState(new Date());
 
@@ -13,7 +13,7 @@ const DatePicker = (props)=>{
             <Form.Label>{label}</Form.Label>
             <DateTimePicker
                 onChange={setDateValue}
-                minDate={new Date()}
+                minDate={minDate}
                 value={dateValue}
                 className="form-control"
             />
@@ -23,12 +23,14 @@ const DatePicker = (props)=>{
 
 DatePicker.propTypes = {
     label: Proptypes.string,
-    id: Proptypes.string
+    id: Proptypes.string,
+    minDate: Proptypes.object
 }
 
 DatePicker.defaultProps = {
     label: "",
-    id: ""
+    id: "",
+    minDate: new Date()
 }
 
 export default DatePicker;
