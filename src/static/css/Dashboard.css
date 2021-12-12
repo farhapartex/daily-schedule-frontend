@@ -5,3 +5,7 @@
     padding-right: .7rem;
     cursor: pointer;
 }
+
+#reschedule{
+    text-decoration: none;
+}

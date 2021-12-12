@@ -9,6 +9,7 @@ const SingleScheduleBox = (props)=> {
             <div className="singleScheduleBox pt-3 pb-3">
                 <p className="text-center">{title}</p>
                 <p className="text-center">{time} | {medium}</p>
+                <p className="text-center"><a href="/schedule/1/update" id="reschedule">Reschedule</a></p>
             </div>
         </div>
     )

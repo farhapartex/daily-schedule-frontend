@@ -17,6 +17,10 @@ const Dashboard = ()=> {
                     <SingleScheduleBox title="Coffee time" time="12:35 pm" medium="No Medium"/>
                     <SingleScheduleBox title="Tech Interview with Nazmul" time="03:00 pm" medium="Google Meet"/>
                     <SingleScheduleBox title="Tech Talk with team" time="06:00 pm" medium="Google Meet"/>
+                    <SingleScheduleBox title="Tech Talk with team" time="06:00 pm" medium="Google Meet"/>
+                    <SingleScheduleBox title="Tech Talk with team" time="06:00 pm" medium="Google Meet"/>
+                    <SingleScheduleBox title="Tech Talk with team" time="06:00 pm" medium="Google Meet"/>
+                    <SingleScheduleBox title="Tech Talk with team" time="06:00 pm" medium="Google Meet"/>
                 </div>
             </Container>
         </div>

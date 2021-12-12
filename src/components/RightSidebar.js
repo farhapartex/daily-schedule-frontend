@@ -9,7 +9,8 @@ const RightSide = ()=> {
         <div className="col-10" id="rightSide">
             <Routes>
                 <Route path="/" element={<Dashboard />}/>
-                <Route path="/add-schedule" element={<Schedule />}/>
+                <Route path="/schedule/create" element={<Schedule />}/>
+                <Route path="/schedule/:id/update" element={<Schedule />}/>
                 <Route path="/profile" element={<Profile />}/>
             </Routes>
         </div>
