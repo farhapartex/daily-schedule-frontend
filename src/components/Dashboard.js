@@ -1,5 +1,6 @@
 import React from "react";
 import SchedulePresentation from "./SchedulePresentation";
+import "../static/css/Dashboard.css";
 
 const Dashboard = ()=> {
     return (

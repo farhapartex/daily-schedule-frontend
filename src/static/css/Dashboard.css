@@ -1,0 +1,11 @@
+.singleScheduleBox{
+    background-color: #ccf2ff;
+    border: 1px solid #99ccff;
+    padding-left: .7rem;
+    padding-right: .7rem;
+    cursor: pointer;
+}
+
+#reschedule{
+    text-decoration: none;
+}

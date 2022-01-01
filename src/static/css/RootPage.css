@@ -1,5 +1,5 @@
 #leftSide{
-    background: #f56a3f;
+    background: linear-gradient(to top, #1affb2 20%,  #1affb2 80%);
     height: 100vh;
 }
 
@@ -15,11 +15,11 @@
 }
 
 #sidebarMenu ul li{
-    padding: 22px 20px;
+    padding: 13px 20px;
 }
 
 #sidebarMenu ul li:hover{
-    background: #e7572b;
+    background: #00e699;
 }
 
 #sidebarMenu ul li a{
@@ -27,4 +27,13 @@
     color: #333333;
     display: block;
     
+}
+
+.pageHeading{
+    padding-left: 1rem;
+    margin-top: 2rem;
+}
+
+.react-datetime-picker__wrapper{
+    border: none !important;
 }

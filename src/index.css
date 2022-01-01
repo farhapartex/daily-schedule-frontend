@@ -38,13 +38,13 @@ code {
 
 .baseAnchor{
   text-decoration: none;
-  color: #ff5722;
+  color: #00b38f;
   cursor: pointer;
 }
 
 .baseAnchor:hover{
   text-decoration: none;
-  color: #ff5722;
+  color: #00b38f;
 }
 
 
@@ -53,8 +53,8 @@ code {
 }
 
 .baseButton{
-  background-color: #fa734a !important;
-  border-color: #ff5722 !important;
+  background-color: #00e6b8 !important;
+  border-color: #00cca3 !important;
 }
 
 .btn:focus {
@@ -92,5 +92,5 @@ input[type="color"]:focus,
 
 #loginBaseBlock{
   background: #d9d9d9;
-  margin-top: 14rem;
+  margin-top: 12rem;
 }
