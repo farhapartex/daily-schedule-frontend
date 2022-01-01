@@ -4,8 +4,9 @@ import { Button, } from "react-bootstrap";
 import { TextGroupField } from "../common";
 import { Banner } from "../banner";
 import { isFormValidation } from "../../utils";
+import { AuthCommonProps } from "./AuthProps";
 
-const Login = (props)=> {
+const Login = (props: AuthCommonProps)=> {
     const {setIsShowLoginBlock} = props;
 
     const [email, setEmail] = useState("");

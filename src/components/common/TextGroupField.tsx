@@ -1,9 +1,9 @@
 import React from "react";
 import Proptypes from "prop-types";
 import { Form } from "react-bootstrap";
+import { TextGroupProp } from "./CommonProps";
 
-
-const TextGroupField = (props)=> {
+const TextGroupField = (props: TextGroupProp)=> {
     const {label, id, type, value, handleChange, placeholder } = props
     return (
         <Form.Group className="mb-3" controlId={id}>

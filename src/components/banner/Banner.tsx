@@ -1,8 +1,9 @@
 import React from "react";
 import Proptypes from "prop-types";
 import { Alert } from "react-bootstrap";
+import { BannerProps } from "./BannerProp";
 
-const Banner = (props)=> {
+const Banner = (props: BannerProps)=> {
     const {type, message, handleCloseBanner} = props;
 
     return (

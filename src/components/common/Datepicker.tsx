@@ -2,8 +2,9 @@ import React, {useState} from "react";
 import DateTimePicker from 'react-datetime-picker';
 import Proptypes from "prop-types";
 import { Form } from "react-bootstrap";
+import { DatePickerProp } from "./CommonProps";
 
-const DatePicker = (props)=>{
+const DatePicker = (props: DatePickerProp)=>{
     const {label, id, minDate} = props;
 
     const [dateValue, setDateValue] = useState(new Date());

@@ -4,8 +4,9 @@ import { Button } from "react-bootstrap";
 import { TextGroupField, CheckBox } from "../common";
 import { Banner } from "../banner";
 import { isFormValidation } from "../../utils";
+import { AuthCommonProps } from "./AuthProps";
 
-const Registration = (props)=> {
+const Registration = (props: AuthCommonProps)=> {
 
     const {setIsShowLoginBlock, } = props;
     const [fullName, setFullName] = useState("");

@@ -1,8 +1,9 @@
 import React from "react";
 import Proptypes from "prop-types";
 import { Form } from "react-bootstrap";
+import { SelectFieldProp } from "./CommonProps";
 
-const SelectField = (props)=> {
+const SelectField = (props: SelectFieldProp)=> {
     const {label, id, options} = props;
 
     return (
