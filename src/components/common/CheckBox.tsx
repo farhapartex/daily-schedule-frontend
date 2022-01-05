@@ -1,9 +1,8 @@
 import React from "react";
-import Proptypes from "prop-types";
 import { Form } from "react-bootstrap";
 import { CheckBoxProps } from "./CommonProps";
 
-const CheckBox = (props: CheckBoxProps)=> {
+const CheckBox: React.FC<CheckBoxProps> = (props)=> {
     const {id, label, name, value, handleChange} = props;
 
 

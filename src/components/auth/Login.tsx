@@ -1,12 +1,11 @@
 import React, {useState} from "react";
-import Proptypes from "prop-types";
 import { Button, } from "react-bootstrap"; 
 import { TextGroupField } from "../common";
 import { Banner } from "../banner";
 import { isFormValidation } from "../../utils";
 import { AuthCommonProps } from "./AuthProps";
 
-const Login = (props: AuthCommonProps)=> {
+const Login: React.FC<AuthCommonProps> = (props)=> {
     const {setIsShowLoginBlock} = props;
 
     const [email, setEmail] = useState("");
@@ -62,7 +61,7 @@ const Login = (props: AuthCommonProps)=> {
             </div>
 
             <div id="loginFormBlock" className="mt-5">
-                <TextGroupField label="Email" id="luEmail" value={email} handleChange={setEmail} placeholder="Type your valid email"/>
+                <TextGroupField label="Email" id="luEmail" value={email} handleChange={setEmail} type="text" placeholder="Type your valid email"/>
                 <TextGroupField label="Password" id="luPassword" type="password" handleChange={setPassword} value={password} placeholder="Type your password"/>
                 <Button variant="info" className="w-100 mt-3 baseButton" onClick={()=>{handleLogin()}}>Login</Button>
             </div>
@@ -72,14 +71,6 @@ const Login = (props: AuthCommonProps)=> {
             </div>
         </div>
     )
-}
-
-Login.propTypes = {
-    setIsShowLoginBlock: Proptypes.func,
-}
-
-Login.defaultProps = {
-    setIsShowLoginBlock: ()=>{}
 }
 
 export default Login;

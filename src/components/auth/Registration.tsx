@@ -1,12 +1,11 @@
 import React, { useState } from "react";
-import Proptypes from "prop-types";
 import { Button } from "react-bootstrap";
 import { TextGroupField, CheckBox } from "../common";
 import { Banner } from "../banner";
 import { isFormValidation } from "../../utils";
 import { AuthCommonProps } from "./AuthProps";
 
-const Registration = (props: AuthCommonProps)=> {
+const Registration: React.FC<AuthCommonProps> = (props)=> {
 
     const {setIsShowLoginBlock, } = props;
     const [fullName, setFullName] = useState("");
@@ -69,9 +68,9 @@ const Registration = (props: AuthCommonProps)=> {
                 <h4>Welcome to Schedule</h4>
             </div>
             <div id="loginFormBlock" className="mt-5">
-                <TextGroupField label="Full Name" id="rFullName" value={fullName} handleChange={setFullName} placeholder="Type your name"/>
-                <TextGroupField label="Email" id="rEmail" value={email} handleChange={setEmail} placeholder="Type your valid email"/>
-                <TextGroupField label="Password (8 digit minimum)" type="password" value={password} handleChange={setPassword} placeholder="Type your password"/>
+                <TextGroupField label="Full Name" id="rFullName" type="text" value={fullName} handleChange={setFullName} placeholder="Type your name"/>
+                <TextGroupField label="Email" id="rEmail" value={email} type="text" handleChange={setEmail} placeholder="Type your valid email"/>
+                <TextGroupField id="rPassword" label="Password (8 digit minimum)" type="password" value={password} handleChange={setPassword} placeholder="Type your password"/>
                 <CheckBox id="termsConditions" label="Accept terms & conditions" name="termCondition" value={termCondition} handleChange={setTermCondition}/>
                 <Button variant="info" className="w-100 mt-3 baseButton" onClick={()=> {handleRegistration()}}>Click to Join</Button>
             </div>
@@ -81,14 +80,6 @@ const Registration = (props: AuthCommonProps)=> {
             </div>
         </div>
     )
-}
-
-Registration.propTypes = {
-    setIsShowLoginBlock: Proptypes.func,
-}
-
-Registration.defaultProps = {
-    setIsShowLoginBlock: ()=>{}
 }
 
 export default Registration;

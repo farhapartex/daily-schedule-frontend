@@ -8,15 +8,15 @@ const SchdeuleForm = ()=> {
             <Container fluid>
                 <div className="row">
                     <div className="col-3">
-                        <TextGroupField label="Title *" id="title" placeholder="Type schedule title"/>
+                        <TextGroupField type="text" label="Title *" id="title" placeholder="Type schedule title" value={"Hello"} handleChange={()=>{}}/>
                     </div>
 
                     <div className="col-3">
-                        <DatePicker label="Date & Time *" id="scheduleDateTime"/>
+                        <DatePicker label="Date & Time *" id="scheduleDateTime" minDate={new Date()}/>
                     </div>
 
                     <div className="col-3">
-                        <TextGroupField label="Medium" id="medium" placeholder="Type the medium if any have"/>
+                        <TextGroupField type="text" label="Medium" id="medium" placeholder="Type the medium if any have" value={"Hello"} handleChange={()=>{}}/>
                     </div>
 
                     <div className="col-12">

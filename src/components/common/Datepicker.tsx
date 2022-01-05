@@ -1,10 +1,9 @@
 import React, {useState} from "react";
 import DateTimePicker from 'react-datetime-picker';
-import Proptypes from "prop-types";
 import { Form } from "react-bootstrap";
 import { DatePickerProp } from "./CommonProps";
 
-const DatePicker = (props: DatePickerProp)=>{
+const DatePicker: React.FC<DatePickerProp> = (props)=>{
     const {label, id, minDate} = props;
 
     const [dateValue, setDateValue] = useState(new Date());
@@ -20,18 +19,6 @@ const DatePicker = (props: DatePickerProp)=>{
             />
         </Form.Group>
     )
-}
-
-DatePicker.propTypes = {
-    label: Proptypes.string,
-    id: Proptypes.string,
-    minDate: Proptypes.object
-}
-
-DatePicker.defaultProps = {
-    label: "",
-    id: "",
-    minDate: new Date()
 }
 
 export default DatePicker;

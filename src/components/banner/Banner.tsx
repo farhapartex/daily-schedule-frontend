@@ -1,26 +1,13 @@
 import React from "react";
-import Proptypes from "prop-types";
 import { Alert } from "react-bootstrap";
 import { BannerProps } from "./BannerProp";
 
-const Banner = (props: BannerProps)=> {
+const Banner: React.FC<BannerProps> = (props)=> {
     const {type, message, handleCloseBanner} = props;
 
     return (
         <Alert variant={type} onClose={() => handleCloseBanner(false)} dismissible>{message}</Alert>
     )
-}
-
-Banner.propTypes = {
-    message: Proptypes.string,
-    info: Proptypes.string,
-    handleCloseBanner: Proptypes.func
-}
-
-Banner.defaultProps = {
-    message: "",
-    type: "info",
-    handleCloseBanner: ()=>{}
 }
 
 

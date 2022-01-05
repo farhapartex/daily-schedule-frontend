@@ -1,9 +1,8 @@
 import React from "react";
-import Proptypes from "prop-types";
 import { Form } from "react-bootstrap";
 import { SelectFieldProp } from "./CommonProps";
 
-const SelectField = (props: SelectFieldProp)=> {
+const SelectField: React.FC<SelectFieldProp> = (props)=> {
     const {label, id, options} = props;
 
     return (
@@ -15,18 +14,6 @@ const SelectField = (props: SelectFieldProp)=> {
             </Form.Select>
         </Form.Group>
     )
-}
-
-SelectField.propTypes = {
-    label: Proptypes.string,
-    options: Proptypes.array,
-    id: Proptypes.string
-}
-
-SelectField.defaultProps = {
-    label: "",
-    options: [],
-    id: ""
 }
 
 export default SelectField;
