@@ -1,7 +1,7 @@
 import React from "react";
 import {Routes, Route,} from "react-router-dom";
 import Dashboard from "./Dashboard";
-import Schedule from "./Schedule";
+import {Schedule} from "./schedule";
 import Profile from "./Profile";
 
 const RightSide = ()=> {

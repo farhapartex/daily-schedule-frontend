@@ -1,7 +1,8 @@
 import React from "react";
-import SchdeuleForm from "./ScheduleForm";
+import SchdeuleForm from "../ScheduleForm";
+import { ScheduleProps } from "./ScheduleProp";
 
-const Schedule = (props)=> {
+const Schedule = (props: ScheduleProps)=> {
 
     const {action} = props;
 
