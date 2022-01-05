@@ -1,7 +1,8 @@
 import { isValidateEmail } from ".";
 
-export const isFormValidation = (formObj)=> {
-    let errorList = [];
+
+export const isFormValidation = (formObj: any)=> {
+    let errorList: any[] = [];
 
     Object.keys(formObj).forEach((key)=>{
         const value = formObj[key];

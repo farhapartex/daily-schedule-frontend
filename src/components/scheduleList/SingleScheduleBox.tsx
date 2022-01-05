@@ -1,7 +1,7 @@
 import React from "react";
-import PropTypes from "prop-types";
+import { SingleScheduleBoxProp } from "./interfaaces";
 
-const SingleScheduleBox = (props)=> {
+const SingleScheduleBox: React.FC<SingleScheduleBoxProp> = (props)=> {
     const {title, time, medium} = props;
 
     return (
@@ -13,18 +13,6 @@ const SingleScheduleBox = (props)=> {
             </div>
         </div>
     )
-}
-
-SingleScheduleBox.propTypes = {
-    title: PropTypes.string,
-    time: PropTypes.string,
-    medium: PropTypes.string
-}
-
-SingleScheduleBox.defaultProps = {
-    title: "text",
-    time: "",
-    medium: "form-control"
 }
 
 
