@@ -9,3 +9,8 @@
 #reschedule{
     text-decoration: none;
 }
+
+#dashboard{
+    width: 96%;
+    margin: auto;
+}
