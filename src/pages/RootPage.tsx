@@ -1,15 +1,15 @@
 import React from "react";
 import { Container } from "react-bootstrap";
 import "../static/css/RootPage.css";
-import LeftSidebar from "../components/LeftSidebar";
-import RightSide from "../components/RightSidebar";
+import LeftSide from "../components/LeftSide";
+import RightSide from "../components/RightSide";
 
 const RootPage = ()=> {
     return (
         <div id="rootPage">
             <Container fluid>
                 <div className="row">
-                    <LeftSidebar />
+                    <LeftSide />
                     <RightSide />
                 </div>
             </Container>

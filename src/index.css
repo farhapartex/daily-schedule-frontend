@@ -53,8 +53,15 @@ code {
 }
 
 .baseButton{
-  background-color: #00e6b8 !important;
-  border-color: #00cca3 !important;
+  background-color: #4f46e5 !important;
+  border-color: #3e37ce !important;
+  color: rgb(197, 197, 197);
+}
+
+.baseButton:hover{
+  background-color: #4f46e5 !important;
+  border-color: #3e37ce !important;
+  color: rgb(197, 197, 197);
 }
 
 .btn:focus {
