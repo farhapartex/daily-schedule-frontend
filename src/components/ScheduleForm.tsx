@@ -1,22 +1,25 @@
 import React from "react";
 import { Container, Button } from "react-bootstrap";
-import { TextGroupField, DatePicker } from "./common";
+import { TextGroupField, DatePicker, SelectField } from "./common";
 
 const SchdeuleForm = ()=> {
     return (
-        <div className="schdeuleForm">
+        <div className="schdeuleForm w-50">
             <Container fluid>
-                <div className="row">
-                    <div className="col-3">
-                        <TextGroupField type="text" label="Title *" id="title" placeholder="Type schedule title" value={"Hello"} handleChange={()=>{}}/>
+                <div className="row mt-5">
+                    <div className="col-6">
+                        <TextGroupField type="text" label="Title *" id="title" placeholder="Type schedule title" value={"Test event"} handleChange={()=>{}}/>
+                    </div>
+                    <div className="col-6">
+                        <SelectField label="Event Type *" id="eventType" optionList={["General", "Out of office", "Task", "Reminder"]}/>
                     </div>
 
-                    <div className="col-3">
+                    <div className="col-6">
                         <DatePicker label="Date & Time *" id="scheduleDateTime" minDate={new Date()}/>
                     </div>
 
-                    <div className="col-3">
-                        <TextGroupField type="text" label="Medium" id="medium" placeholder="Type the medium if any have" value={"Hello"} handleChange={()=>{}}/>
+                    <div className="col-6">
+                        <TextGroupField type="text" label="Guest Email" id="medium" placeholder="Add email by using comma" value={"hasan08sust@gmail.com,"} handleChange={()=>{}}/>
                     </div>
 
                     <div className="col-12">

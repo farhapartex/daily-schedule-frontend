@@ -18,7 +18,7 @@ const ProfileForm = ()=> {
                         <TextGroupField type="text" label="Email" id="email" placeholder="Ex: example@test.com" value={"hello@gmail.com"} handleChange={()=>{}}/>
                     </div>
                     <div className="col-6">
-                        <SelectField label="Country" id="country" options={[]}/>
+                        <SelectField label="Country" id="country" optionList={["Bangladesh", "India", "China", "Bhutan"]}/>
                     </div>
                     <div className="col-6">
                         <TextGroupField type="text" label="Mobile No" id="mobileNo" placeholder="Example: +8801963259875" value={"012365487"} handleChange={()=>{}}/>

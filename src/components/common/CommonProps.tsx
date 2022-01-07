@@ -15,7 +15,7 @@ export interface DatePickerProp{
 export interface SelectFieldProp{
     label: string,
     id: string,
-    options: Array<string>
+    optionList: Array<string>
 }
 
 export interface TextGroupProp{

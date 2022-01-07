@@ -2,7 +2,7 @@ import React from "react";
 import SchdeuleForm from "../ScheduleForm";
 import { ScheduleProps } from "./ScheduleProp";
 
-const Schedule = (props: ScheduleProps)=> {
+const Schedule: React.FC<ScheduleProps> = (props)=> {
 
     const {action} = props;
 
