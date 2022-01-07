@@ -12,7 +12,7 @@ const SelectField: React.FC<SelectFieldProp> = (props)=> {
 
 
     const SelectOption: React.FC<{option: SelectOptionInterface}> = ({option}) => {
-        return <option key={option.key}>{option.value}</option>
+        return <option key={option.key} value={option.value}>{option.value}</option>
     }
 
     const renderOptions = ()=> {
